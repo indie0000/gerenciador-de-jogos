@@ -73,13 +73,13 @@ void verEstatisticas() {
 
     // Encontra jogo com maior nota
 
-    float maiorNota;
+    float maiorNota = notas[0];
 
-    for (int i = 0; i < totalJogos; i++) {
-        if (notas[0] < notas[i]) {
-            maiorNota = notas[0] = notas[i];
-        }
+    for (int i = 1; i < totalJogos; i++) {
+    if (notas[i] > maiorNota) {
+        maiorNota = notas[i];
     }
+}
 
     printf("\n • Maior nota: %.2f\n", maiorNota);
 }
